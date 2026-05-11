@@ -24,8 +24,6 @@ All parameters live at the top of each file or inside the named modules.
 
 **Digital camo (squares, hexagons):** `cell` sets grid spacing, `cutout` sets the visible pixel size (the difference is the wall thickness between adjacent cuts), `fill_pct` sets cut density. The `should_cut(c, r)` hash is deterministic. Change the `+ 11` constant to reshuffle the pattern at the same density.
 
-**Classic camo:** Cluster positions sit in `camo_shapes()`. Circle positions and radii are in the per-cluster modules. Polygon offshoots need at least one vertex inside a cluster circle to merge cleanly, the distance from the offshoot's nearest vertex to a circle's center must be less than that circle's radius.
-
 **Hand:** Finger positions are `finger(base_x, base_y, base_r, tip_x, tip_y, tip_r)` calls in `hand()`. Palm shape is the hull of seven circles in `palm()`. To resize uniformly, wrap `hand()` in a `scale([s, s])` and adjust the outer `width` and `height` to match.
 
 ## Use
